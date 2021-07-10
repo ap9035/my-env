@@ -1,0 +1,15 @@
+" Specify a directory for plugins
+" - For Neovim: stdpath('data') . '/plugged'
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
+
+Plug 'codota/tabnine-vim'
+Plug 'dense-analysis/ale'
+
+call plug#end()
+
+let b:ale_linters = {'python': ['flake8', 'pylint'], 'ansible':['ansible-lint']}
+let b:ale_fixers = {'python':['autopep8', 'yapf']}
+let g:ale_set_loclist = 0
+let g:ale_set_quickfix = 1
+let g:ale_fix_on_save = 1
