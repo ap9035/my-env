@@ -1,7 +1,7 @@
-export EDITOR=vim
+export EDITOR=nvim
 
 # $HOME/.zshrc
-source /usr/local/share/antigen.zsh
+source $HOME/.local/share/antigen.zsh
 
 antigen use oh-my-zsh
 antigen theme tonyseek/oh-my-zsh-seeker-theme seeker
@@ -109,5 +109,7 @@ export PATH=$HOME/.local/bin/ansible:/home/cdli/.local/bin:$PATH
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+alias vim="nvim"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

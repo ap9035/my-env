@@ -2,16 +2,18 @@
 - hosts: localhost
   tasks:
     - name: install nvim
-      pacman:
+      apt:
         name:
-          - nvim
-          - python-pynvim
+          - neovim
+          - python3-pynvim
         state: present
     - name: install zsh
-      pacman:
+      apt:
         name:
           - zsh
-          - zsh-completions
+          - zsh-common
+      become: true
+      become_user: root
     - name: setup vim-plug directory
       file:
         path: $HOME/.local/share/nvim/site/autoload
